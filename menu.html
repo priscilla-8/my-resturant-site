@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Restaurant App</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header id="main-header">
+ <nav class="navbar navbar-expand-lg shadow fixed-top">
+  <div class="container-fluid">
+    <!-- Logo + Brand -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="Screenshot_8-4-2026_14441_.jpeg" alt="Logo" width="80" height="50" class="me-2">
+      <span class="header-title">Teekay Restaurant</span>
+    </a>
+
+    <!-- Centered nav items -->
+    <div class="navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+ 
+<div id="menu-header">
+  <h2>Our Menu</h2>
+  <div class="search-box">
+  <input type="text" placeholder="search food....">
+  <div class="cart">Cart:₦ <span id="total">0</span>
+  </div>
+</div>
+</div>
+<section class="menu-section">
+
+
+  <div class="menu-container" id="menu">
+
+    <div class="item main" data-name="Barbecque">
+      <img src="menu 1.jpg" alt="">
+      <h3>Authentic Barbecque</h3>
+      <p class="desc">Smoky grilled meat with rich flavour.</p>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦7000</p>
+      <button onclick="addToCart(Aunthentic,3500)"> Add to Cart</button>
+      <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+ <div class="item main" data-name="Sandwich">
+      <img src="menu 2.jpg" alt="">
+      <h3>British Sandwich</h3>
+      <p class="desc">Fresh bread layered with fillings.</p>
+      <br>
+      <br>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦3500</p>
+      <button onclick="addToCart(British,3500)"> Add to Cart</button>
+      <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+ <div class="item main" data-name="lamb">
+      <img src="menu 3.jpg" alt="">
+      <h3>Grilled lamb</h3>
+      <p class="desc">Served with creamy mashed potatoes.</p>
+      <br>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦15000</p>
+      <button onclick="addToCart(lamb ,15000)"> Add to Cart</button>
+      <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+ <div class="item main" data-name="rolls">
+      <img src="menu 10.jpg" alt="">
+      <h3>Spring Rolls</h3>
+      <p class="desc">Crunchy spring rolls rich in flavours.</p>
+      <br>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦25000</p>
+      <button onclick="addToCart(spring ,25000)"> Add to Cart</button>
+      <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+<div class="item main" data-name="Croissant">
+      <img src="menu 7.jpg" alt="">
+      <h3>Glazzed Croissant</h3>
+      <p class="desc">Fluffy and </p>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦5000</p>
+      <button onclick="addToCart(Croissant,5000)"> Add to Cart</button>
+      <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+
+    <div class="item main">
+      <img src="menu 8.jpg" alt="">
+      <h3>Crepe with Icecream</h3>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦20000</p>
+      <button onclick="addToCart(Crepe,20000)"> Add to Cart</button>
+      <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+
+    <div class="item main">
+      <img src="menu 11.jpg" alt="">
+      <h3>Full Platter Breakfast</h3>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦2000</p>
+      <button onclick="addToCart(Breakfast,15000)"> Add to Cart</button>
+      <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+<div class="item main">
+      <img src="menu 12.jpg" alt="">
+      <h3>Glazzed Fluffy Milky Doughnut</h3>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦15000</p>
+      <button onclick="addToCart(Doughnut,15000)"> Add to Cart</button>
+ <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+     <div class="item main">
+      <img src="menu 14.jpg" alt="">
+      <h3>Japenese Sushi</h3>
+      <br>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦25000</p>
+      <button onclick="addToCart(Sushi,25000)"> Add to Cart</button>
+    <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+ 
+   <div class="item main">
+      <img src="menu 16.jpg" alt="">
+      <h3>Fluffy Chocolate Pancakes</h3>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦10000</p>
+      <button onclick="addToCart(Pancakes,10000)"> Add to Cart</button>
+    <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+ <div class="item main">
+      <img src="menu 18.jpg" alt="">
+      <h3>Peperoni Pizza</h3>
+      <br>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦15000</p>
+      <button onclick="addToCart(pizza,15000)"> Add to Cart</button>
+    <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+ <div class="item main">
+      <img src="menu 21.jpg" alt="">
+      <h3>Signature Fruit Parfait</h3>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦10000</p>
+      <button onclick="addToCart(parfait,10000)"> Add to Cart</button>
+    <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+     <div class="item main">
+      <img src="menu 23.jpg" alt="">
+      <h3>Beef Sharwama</h3>
+      <br>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦7000</p>
+      <button onclick="addToCart(Sharwama,7000)"> Add to Cart</button>
+    <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+     <div class="item main">
+      <img src="menu 24.jpg" alt="">
+      <h3>Cheese Strawberry Cake</h3>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦15000</p>
+      <button onclick="addToCart(cake,15000)"> Add to Cart</button>
+    <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+     <div class="item main">
+      <img src="Muschel-Spaghetti in Tomatensugo.jpg" alt="">
+      <br>
+      <h3>Muschel Spaghetti</h3>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦35000</p>
+      <button onclick="addToCart(Sphagetti,35000)"> Add to Cart</button>
+    <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+ <div class="item main">
+      <img src="teekay 6.jpeg" alt="">
+      <h3>Fried Rice and Chicken</h3>
+      <div class="rating">
+    ★ 4.5
+     </div>
+      <p>₦15000</p>
+      <button onclick="addToCart(Rice,15000)"> Add to Cart</button>
+    <button onclick="orderWhatsapp(Aunthentic,3500)">Order</button>
+    </div>
+
+ </div>
+</section>
+
+<button class="checkout" onclick="checkout()">checkout</button>
+
+<!---Cart Section-->
+<section class="cart">
+  <h2>Your Cart</h2>
+<ul id="cart-items"></ul>
+<h3>Total:₦<span id="total">0</span> </h3> 
+</section>  
+<footer class="footer">
+
+<h3>Teekays Restaurant</h3>
+
+<p>📍 Lagos, Nigeria</p>
+<p>📞 +234 000 000 000</p>
+<p>✉ info@teekays.com</p>
+
+<p>Open Daily: 9AM - 10PM</p>
+
+<p>© 2025 Teekays Restaurant</p>
+
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
